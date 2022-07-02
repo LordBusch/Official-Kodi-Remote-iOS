@@ -1142,6 +1142,7 @@
     UIColor *fontColor = label.textColor;
     NSString *fontFamily = label.font.familyName;
     int fontSize = label.font.pointSize;
+    NSTextAlignment textAlignment = label.textAlignment;
     
     // Let html style re-use the same font family and size as the original label
     NSString *style = [NSString stringWithFormat:@"<meta charset=\"UTF-8\"><style> body { font-family: '%@'; font-size: %dpx; } </style>", fontFamily, fontSize];
@@ -1156,6 +1157,9 @@
     
     // Restore the color to keep control over Light/Dark Mode.
     label.textColor = fontColor;
+    
+    // Restore text alignment
+    label.textAlignment = textAlignment;
 }
 
 @end
