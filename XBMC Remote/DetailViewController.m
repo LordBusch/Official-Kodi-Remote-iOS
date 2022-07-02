@@ -1719,12 +1719,12 @@
         cell.posterLabelFullscreen.font = [UIFont boldSystemFontOfSize:posterFontSize];
         cell.posterThumbnail.contentMode = UIViewContentModeScaleAspectFit;
         if (stackscrollFullscreen) {
-            cell.posterLabelFullscreen.text = item[@"label"];
+            [Utilities setAttrText:item[@"label"] forLabel:cell.posterLabelFullscreen];
             cell.labelImageView.hidden = YES;
             cell.posterLabelFullscreen.hidden = NO;
         }
         else {
-            cell.posterLabel.text = item[@"label"];
+            [Utilities setAttrText:item[@"label"] forLabel:cell.posterLabel];
             cell.posterLabelFullscreen.hidden = YES;
         }
         
