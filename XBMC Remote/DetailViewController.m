@@ -2411,7 +2411,7 @@
         title.text = [NSString stringWithFormat:@"%@. %@", item[@"channelnumber"], item[@"label"]];
     }
     else {
-        title.text = item[@"label"];
+        [Utilities setAttrText:item[@"label"] forLabel:title];
     }
 
     frame = genre.frame;

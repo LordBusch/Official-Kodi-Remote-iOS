@@ -1121,4 +1121,41 @@
     return percent_elapsed;
 }
 
++ (void)setAttrText:(NSString*)text forLabel:(UILabel*)label {
+    // BB to html
+    text = [text stringByReplacingOccurrencesOfString:@"[B]" withString:@"<b>"];
+    text = [text stringByReplacingOccurrencesOfString:@"[/B]" withString:@"</b>"];
+    text = [text stringByReplacingOccurrencesOfString:@"[b]" withString:@"<b>"];
+    text = [text stringByReplacingOccurrencesOfString:@"[/b]" withString:@"</b>"];
+    
+    text = [text stringByReplacingOccurrencesOfString:@"[I]" withString:@"<i>"];
+    text = [text stringByReplacingOccurrencesOfString:@"[/I]" withString:@"</i>"];
+    text = [text stringByReplacingOccurrencesOfString:@"[i]" withString:@"<i>"];
+    text = [text stringByReplacingOccurrencesOfString:@"[/i]" withString:@"</i>"];
+    
+    text = [text stringByReplacingOccurrencesOfString:@"[U]" withString:@"<u>"];
+    text = [text stringByReplacingOccurrencesOfString:@"[/U]" withString:@"</u>"];
+    text = [text stringByReplacingOccurrencesOfString:@"[u]" withString:@"<u>"];
+    text = [text stringByReplacingOccurrencesOfString:@"[/u]" withString:@"</u>"];
+    
+    // Read font family, size and color to keep this.
+    UIColor *fontColor = label.textColor;
+    NSString *fontFamily = label.font.familyName;
+    int fontSize = label.font.pointSize;
+    
+    // Let html style re-use the same font family and size as the original label
+    NSString *style = [NSString stringWithFormat:@"<meta charset=\"UTF-8\"><style> body { font-family: '%@'; font-size: %dpx; } </style>", fontFamily, fontSize];
+    NSString *styledHtml = [NSString stringWithFormat:@"%@%@", style, text];
+
+    // Generate an attributed string from the HTML
+    NSDictionary *options = @{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType };
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithData:[styledHtml dataUsingEncoding:NSUTF8StringEncoding] options:options documentAttributes:NULL error:NULL];
+
+    // Set the attributedText property of the UILabel
+    label.attributedText = attributedText;
+    
+    // Restore the color to keep control over Light/Dark Mode.
+    label.textColor = fontColor;
+}
+
 @end
