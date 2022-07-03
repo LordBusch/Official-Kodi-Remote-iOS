@@ -1138,28 +1138,12 @@
     text = [text stringByReplacingOccurrencesOfString:@"[u]" withString:@"<u>"];
     text = [text stringByReplacingOccurrencesOfString:@"[/u]" withString:@"</u>"];
     
-    // Read font family, size and color to keep this.
-    UIColor *fontColor = label.textColor;
-    NSString *fontFamily = label.font.familyName;
-    int fontSize = label.font.pointSize;
-    NSTextAlignment textAlignment = label.textAlignment;
-    
-    // Let html style re-use the same font family and size as the original label
-    NSString *style = [NSString stringWithFormat:@"<meta charset=\"UTF-8\"><style> body { font-family: '%@'; font-size: %dpx; } </style>", fontFamily, fontSize];
-    NSString *styledHtml = [NSString stringWithFormat:@"%@%@", style, text];
-
     // Generate an attributed string from the HTML
-    NSDictionary *options = @{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType };
-    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithData:[styledHtml dataUsingEncoding:NSUTF8StringEncoding] options:options documentAttributes:NULL error:NULL];
-
-    // Set the attributedText property of the UILabel
-    label.attributedText = attributedText;
+    NSDictionary *options = @{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType};
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithData:[text dataUsingEncoding:NSUTF8StringEncoding] options:options documentAttributes:NULL error:NULL];
     
-    // Restore the color to keep control over Light/Dark Mode.
-    label.textColor = fontColor;
-    
-    // Restore text alignment
-    label.textAlignment = textAlignment;
+    // Set the string portion of attributedText to the text property of the UILabel
+    label.text = attributedText.string;
 }
 
 @end
