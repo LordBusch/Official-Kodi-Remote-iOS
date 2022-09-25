@@ -100,9 +100,39 @@
 		0FEE08161704819A00EC9BC7 /* FloatingHeaderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEE08151704819A00EC9BC7 /* FloatingHeaderFlowLayout.m */; };
 		1A6742E9168479FD00E8D5AF /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6742E8168479FC00E8D5AF /* MasterViewController.xib */; };
 		1A9786C01683D87800B4F3F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A9786C21683D87800B4F3F8 /* Localizable.strings */; };
+		35ACEF0528E0C9BF00816173 /* WidgetRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ACEF0428E0C9BF00816173 /* WidgetRefresh.swift */; };
+		35D49A3D28DDC4400034BF05 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D49A3C28DDC4400034BF05 /* WidgetKit.framework */; };
+		35D49A3F28DDC4400034BF05 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D49A3E28DDC4400034BF05 /* SwiftUI.framework */; };
+		35D49A4228DDC4400034BF05 /* Kodi_Remote_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D49A4128DDC4400034BF05 /* Kodi_Remote_Widget.swift */; };
+		35D49A4428DDC4420034BF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D49A4328DDC4420034BF05 /* Assets.xcassets */; };
+		35D49A4828DDC4420034BF05 /* Kodi Remote WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 35D49A3B28DDC4400034BF05 /* Kodi Remote WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C718444625FFD06400F5A060 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C718444525FFD06300F5A060 /* SafariServices.framework */; };
 		C7478BF9257258E700161C1E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7478BF8257258E700161C1E /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35D49A4628DDC4420034BF05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F5548ED151D1187007E633F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35D49A3A28DDC4400034BF05;
+			remoteInfo = "Kodi Remote WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		35D49A4928DDC4420034BF05 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				35D49A4828DDC4420034BF05 /* Kodi Remote WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F00207516EE247A003822B5 /* OBSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBSlider.h; sourceTree = "<group>"; };
@@ -281,6 +311,16 @@
 		1A9786AF1683CEEA00B4F3F8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A9786C11683D87800B4F3F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1A9786C31683D8E900B4F3F8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3528287B28E0F34F00730F3F /* Kodi Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kodi Remote.entitlements"; sourceTree = "<group>"; };
+		3528287C28E0F36F00730F3F /* Kodi Remote WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kodi Remote WidgetExtension.entitlements"; sourceTree = "<group>"; };
+		35ACEF0328E0C9BE00816173 /* Kodi Remote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kodi Remote-Bridging-Header.h"; sourceTree = "<group>"; };
+		35ACEF0428E0C9BF00816173 /* WidgetRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRefresh.swift; sourceTree = "<group>"; };
+		35D49A3B28DDC4400034BF05 /* Kodi Remote WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Kodi Remote WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35D49A3C28DDC4400034BF05 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		35D49A3E28DDC4400034BF05 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		35D49A4128DDC4400034BF05 /* Kodi_Remote_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kodi_Remote_Widget.swift; sourceTree = "<group>"; };
+		35D49A4328DDC4420034BF05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35D49A4528DDC4420034BF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ED18E7A16B572D700CA03F4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8ED18E7B16B572D700CA03F4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B1FF37DE1709D1EB005473FF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -303,6 +343,15 @@
 				0F5548FD151D1187007E633F /* Foundation.framework in Frameworks */,
 				C718444625FFD06400F5A060 /* SafariServices.framework in Frameworks */,
 				0F5548FF151D1187007E633F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35D49A3828DDC4400034BF05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D49A3F28DDC4400034BF05 /* SwiftUI.framework in Frameworks */,
+				35D49A3D28DDC4400034BF05 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +425,8 @@
 				0F8E308716FA536C009DEE72 /* PosterHeaderView.m */,
 				0F284A5016F63C9A00AFC1EF /* PosterLabel.h */,
 				0F284A5116F63C9A00AFC1EF /* PosterLabel.m */,
+				35ACEF0328E0C9BE00816173 /* Kodi Remote-Bridging-Header.h */,
+				35ACEF0428E0C9BF00816173 /* WidgetRefresh.swift */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -460,10 +511,13 @@
 		0F5548EB151D1187007E633F = {
 			isa = PBXGroup;
 			children = (
+				3528287C28E0F36F00730F3F /* Kodi Remote WidgetExtension.entitlements */,
+				3528287B28E0F34F00730F3F /* Kodi Remote.entitlements */,
 				0F59E2661564796B00184AE8 /* CONTRIBUTING.md */,
 				0F59E26315646FB800184AE8 /* LICENSE */,
 				0F8717911564566300AE2D48 /* README.md */,
 				0F554900151D1187007E633F /* XBMC Remote */,
+				35D49A4028DDC4400034BF05 /* Kodi Remote Widget */,
 				0F5548F9151D1187007E633F /* Frameworks */,
 				0F5548F7151D1187007E633F /* Products */,
 			);
@@ -473,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				0F5548F6151D1187007E633F /* Kodi Remote.app */,
+				35D49A3B28DDC4400034BF05 /* Kodi Remote WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -488,6 +543,8 @@
 				0F5548FA151D1187007E633F /* UIKit.framework */,
 				0F5548FC151D1187007E633F /* Foundation.framework */,
 				0F5548FE151D1187007E633F /* CoreGraphics.framework */,
+				35D49A3C28DDC4400034BF05 /* WidgetKit.framework */,
+				35D49A3E28DDC4400034BF05 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -661,6 +718,16 @@
 			path = SVPullToRefresh;
 			sourceTree = "<group>";
 		};
+		35D49A4028DDC4400034BF05 /* Kodi Remote Widget */ = {
+			isa = PBXGroup;
+			children = (
+				35D49A4128DDC4400034BF05 /* Kodi_Remote_Widget.swift */,
+				35D49A4328DDC4420034BF05 /* Assets.xcassets */,
+				35D49A4528DDC4420034BF05 /* Info.plist */,
+			);
+			path = "Kodi Remote Widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -671,15 +738,34 @@
 				0F5548F2151D1187007E633F /* Sources */,
 				0F5548F3151D1187007E633F /* Frameworks */,
 				0F5548F4151D1187007E633F /* Resources */,
+				35D49A4928DDC4420034BF05 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				35D49A4728DDC4420034BF05 /* PBXTargetDependency */,
 			);
 			name = "Kodi Remote";
 			productName = "XBMC Remote";
 			productReference = 0F5548F6151D1187007E633F /* Kodi Remote.app */;
 			productType = "com.apple.product-type.application";
+		};
+		35D49A3A28DDC4400034BF05 /* Kodi Remote WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35D49A4C28DDC4420034BF05 /* Build configuration list for PBXNativeTarget "Kodi Remote WidgetExtension" */;
+			buildPhases = (
+				35D49A3728DDC4400034BF05 /* Sources */,
+				35D49A3828DDC4400034BF05 /* Frameworks */,
+				35D49A3928DDC4400034BF05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kodi Remote WidgetExtension";
+			productName = "Kodi Remote WidgetExtension";
+			productReference = 35D49A3B28DDC4400034BF05 /* Kodi Remote WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -687,8 +773,19 @@
 		0F5548ED151D1187007E633F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "joethefox inc.";
+				TargetAttributes = {
+					0F5548F5151D1187007E633F = {
+						LastSwiftMigration = 1400;
+					};
+					35D49A3A28DDC4400034BF05 = {
+						CreatedOnToolsVersion = 14.0;
+						DevelopmentTeam = P6H639ZKCX;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 0F5548F0151D1187007E633F /* Build configuration list for PBXProject "Kodi Remote" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -715,6 +812,7 @@
 			projectRoot = "";
 			targets = (
 				0F5548F5151D1187007E633F /* Kodi Remote */,
+				35D49A3A28DDC4400034BF05 /* Kodi Remote WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -754,6 +852,14 @@
 				0F7A8A921926776900313C17 /* AppInfoViewController.xib in Resources */,
 				1A9786C01683D87800B4F3F8 /* Localizable.strings in Resources */,
 				1A6742E9168479FD00E8D5AF /* MasterViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35D49A3928DDC4400034BF05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D49A4428DDC4420034BF05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,6 +907,7 @@
 				0FEAE76816EA632800387DED /* ActorCell.m in Sources */,
 				0F00207816EE247A003822B5 /* OBSlider.m in Sources */,
 				0F284A5216F63C9A00AFC1EF /* PosterLabel.m in Sources */,
+				35ACEF0528E0C9BF00816173 /* WidgetRefresh.swift in Sources */,
 				0F44EC5118A6672100BE44BD /* ProgressPieView.m in Sources */,
 				0F284A5516F6419700AFC1EF /* PosterCell.m in Sources */,
 				0F8E308816FA536C009DEE72 /* PosterHeaderView.m in Sources */,
@@ -824,7 +931,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		35D49A3728DDC4400034BF05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D49A4228DDC4400034BF05 /* Kodi_Remote_Widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35D49A4728DDC4420034BF05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35D49A3A28DDC4400034BF05 /* Kodi Remote WidgetExtension */;
+			targetProxy = 35D49A4628DDC4420034BF05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0F554903151D1187007E633F /* InfoPlist.strings */ = {
@@ -968,17 +1091,24 @@
 		0F55491B151D1187007E633F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Kodi Remote.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XBMC Remote/Kodi Remote-Prefix.pch";
 				INFOPLIST_FILE = "XBMC Remote/Kodi Remote-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-w",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "it.joethefox.XBMC-Remote";
 				PRODUCT_NAME = "Kodi Remote";
+				SWIFT_OBJC_BRIDGING_HEADER = "XBMC Remote/Kodi Remote-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -987,17 +1117,110 @@
 		0F55491C151D1187007E633F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Kodi Remote.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XBMC Remote/Kodi Remote-Prefix.pch";
 				INFOPLIST_FILE = "XBMC Remote/Kodi Remote-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.joethefox.XBMC-Remote";
 				PRODUCT_NAME = "Kodi Remote";
 				PROVISIONING_PROFILE_SPECIFIER = "Kodi Remote AppStore";
+				SWIFT_OBJC_BRIDGING_HEADER = "XBMC Remote/Kodi Remote-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		35D49A4A28DDC4420034BF05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Kodi Remote WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = P6H639ZKCX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Kodi Remote Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Kodi Remote Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 joethefox inc. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "it.joethefox.XBMC-Remote.Kodi-Remote-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35D49A4B28DDC4420034BF05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Kodi Remote WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = P6H639ZKCX;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Kodi Remote Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Kodi Remote Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 joethefox inc. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "it.joethefox.XBMC-Remote.Kodi-Remote-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1018,6 +1241,15 @@
 			buildConfigurations = (
 				0F55491B151D1187007E633F /* Debug */,
 				0F55491C151D1187007E633F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35D49A4C28DDC4420034BF05 /* Build configuration list for PBXNativeTarget "Kodi Remote WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35D49A4A28DDC4420034BF05 /* Debug */,
+				35D49A4B28DDC4420034BF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
