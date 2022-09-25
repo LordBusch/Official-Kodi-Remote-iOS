@@ -20,6 +20,7 @@
 #import "ShowInfoViewController.h"
 #import "OBSlider.h"
 #import "Utilities.h"
+#import "Kodi_Remote-Swift.h"
 
 @interface NowPlaying ()
 
@@ -533,6 +534,14 @@ long currentItemID;
                                  currentItemID = [nowPlayingInfo[@"id"] longValue];
                              }
                              if ((nowPlayingInfo.count && currentItemID != storedItemID) || nowPlayingInfo[@"id"] == nil || ([nowPlayingInfo[@"type"] isEqualToString:@"channel"] && ![nowPlayingInfo[@"title"] isEqualToString:storeLiveTVTitle])) {
+                                 //AB: Update title, album and artist if new track is coming up
+                                 NSUserDefaults *widgetData = [NSUserDefaults.alloc initWithSuiteName:@"group.com.kodifoundation.officialkodiremote"];
+                                 [widgetData setObject:nowPlayingInfo[@"title"] forKey:@"title"];
+                                 [widgetData setObject:nowPlayingInfo[@"album"] forKey:@"album"];
+                                 [widgetData setObject:nowPlayingInfo[@"artist"] forKey:@"artist"];
+                                 Refresh *instance = [Refresh new];
+                                 [instance test];
+                                 //AB
                                  storedItemID = currentItemID;
                                  [self performSelector:@selector(loadCodecView) withObject:nil afterDelay:.5];
                                  itemDescription.text = [nowPlayingInfo[@"description"] length] != 0 ? [NSString stringWithFormat:@"%@", nowPlayingInfo[@"description"]] : [nowPlayingInfo[@"plot"] length] != 0 ? [NSString stringWithFormat:@"%@", nowPlayingInfo[@"plot"]] : @"";
